@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --clr-main: #993b3b;
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-grey: #f2f2f2;
+    --font-main: 'Montserrat', sans-serif;
+    --font-sec: 'Rubik', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul{
+    margin: 0;
+    padding: 0;    
+};
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}   
