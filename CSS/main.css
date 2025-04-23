@@ -2,6 +2,8 @@
 
 :root{
     --clr-main: #993b3b;
+    --clr-main-light: #f2d6d6;
+    --clr-main-dark: #5c1f1f;
     --clr-white: #fff;
     --clr-black: #000;
     --clr-grey: #f2f2f2;
@@ -27,3 +29,57 @@ ul{
 a{
     text-decoration: none;
 }   
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    background-color: var(--clr-main);
+}
+
+aside{
+    color: var(--clr-white);
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+.logo{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+footer{
+    text-align: center;
+    padding: 1rem;    
+    color: var(--clr-main-light);
+    font-size: 0.8rem;
+
+}
+
+main{
+    display: grid;
+    background-color: var(--clr-white);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem; 
+    padding: 3rem;
+}
+.titulo-principal{
+    color: var(--clr-main);
+}
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;   
+    
+}
+.producto-imagen{
+    max-width: 100%; 
+
+}
+
