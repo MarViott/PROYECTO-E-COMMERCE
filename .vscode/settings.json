@@ -1,8 +1,12 @@
 {
     "workbench.editor.centeredLayoutFixedWidth": true,
     "cSpell.words": [
+        "agregar",
+        "boton",
         "contenedor",
+        "producto",
         "productos",
+        "remera",
         "titulo"
     ],
     "workbench.editor.enablePreview": false
