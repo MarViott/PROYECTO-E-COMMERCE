@@ -129,7 +129,7 @@ const productos = [
             id: "tazas",
         },
          precio: 8000,
-        }
+        },
     {
         id: "taza-02",        
         titulo: "Ser o no ser",
@@ -139,7 +139,7 @@ const productos = [
             id: "tazas",
         },
          precio: 8000,
-        }
+        },
     {
         id: "taza-03",        
         titulo: "To be or not to be",
@@ -149,7 +149,7 @@ const productos = [
             id: "tazas",
         },
          precio: 8000,
-        }
+        },
     {
         id: "taza-04",        
         titulo: "Shakespeare",
@@ -159,7 +159,7 @@ const productos = [
             id: "tazas",
         },
          precio: 8000,
-        }
+        },
     {
         id: "taza-05",        
         titulo: "Ser o no ser",
@@ -169,7 +169,7 @@ const productos = [
             id: "tazas",
         },
          precio: 8000,
-        }
+        },
     {
         id: "taza-06",        
         titulo: "I love art",
@@ -180,6 +180,44 @@ const productos = [
         },
          precio: 8000,
         }
-    ]
+    ];
   
-    
+//CARGAR PRODUCTOS EN EL HTML
+const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
+
+    function cargarProductos (productosElegidos) { 
+        contenedorProductos.innerHTML = ""; //Limpiamos el contenedor de productos para que no se repitan al filtrar por categoria.
+        //Recorremos el array de productos y los mostramos en el HTML
+        //con el forEach, por cada producto creamos un div y le agregamos la clase producto
+        productosElegidos.forEach(producto => {
+            //crea un div para cada producto y le agrega la clase producto
+            //le agrega el contenido del producto, imagen, titulo y precio
+            const div = document.createElement("div");
+            div.classList.add("producto");
+            div.innerHTML = `
+                <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">${producto.titulo}</h3>
+                    <p class="producto-precio">$${producto.precio}</p>
+                <button id="${producto.id}" class="producto-agregar">Agregar al carrito</button>
+                </div>
+            `;
+            contenedorProductos.append(div);
+        })
+    }
+
+    cargarProductos(productos);
+
+    botonesCategorias.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            
+            botonesCategorias.forEach(boton => boton.classList.remove("active"));
+            
+            e.currentTarget.classList.add("active");
+           
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            cargarProductos(productosBoton);
+           
+        })
+    })

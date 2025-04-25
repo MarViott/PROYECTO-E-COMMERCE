@@ -72,12 +72,12 @@ aside{
     font-size: .8 5rem;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    width: 100%;
 }
 
 .boton-menu.active{
     color: var(--clr-main);
     background-color: var(--clr-white);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
