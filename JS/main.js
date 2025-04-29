@@ -248,7 +248,19 @@ const numerito = document.querySelector("#numerito");
 
         }
     //CARRITO
-    const productosEnCarrito = [];
+    //Creamos una variable para guardar los productos en el carrito
+    let productosEnCarrito;
+    //Si no hay productos en el local storage, los guardamos en el local storage
+     //Creamos una variable para guardar los productos en el carrito
+    //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
+    const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+    if (productosEnCarritoLS) {
+        productosEnCarrito = productosEnCarritoLS; //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
+        actualizarNumerito(); //Actualizamos el numerito del carrito
+    } else {
+        productosEnCarrito = [];
+    }
+    
     function agregarAlCarrito(e) {
         const idBoton = e.currentTarget.id;
         const productoAgregado = productos.find(producto => producto.id === idBoton);
