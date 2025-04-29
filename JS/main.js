@@ -254,18 +254,23 @@ const numerito = document.querySelector("#numerito");
         const productoAgregado = productos.find(producto => producto.id === idBoton);
 
         if (productosEnCarrito.some(producto => producto.id === idBoton)) {
-            const index = productosEnCarrito.indexOf(productoAgregado);
-                productosEnCarrito[index].cantidad++;
+            const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+            productosEnCarrito[index].cantidad++;
         } else {
             productoAgregado.cantidad = 1;
             productosEnCarrito.push(productoAgregado);
         }  
-        actualizarNumerito(); //Actualizamos el numerito del carrito          
+
+        actualizarNumerito(); //Actualizamos el numerito del carrito 
+        
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     }
 
     //Actualizar el numerito del carrito
     function actualizarNumerito() {
-        let numerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+        let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+        numerito.innerText = nuevoNumerito; //Actualizamos el numerito del carrito
     }
+   
        
         
