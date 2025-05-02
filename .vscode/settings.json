@@ -2,19 +2,26 @@
     "workbench.editor.centeredLayoutFixedWidth": true,
     "cSpell.words": [
         "acciones",
+        "actualizar",
         "agregar",
         "boton",
+        "botones",
+        "cargar",
         "carrito",
+        "Comprado",
         "comprar",
         "contenedor",
         "derecha",
+        "eliminar",
         "imagen",
         "numerito",
         "producto",
         "productos",
         "remera",
         "remeras",
-        "titulo"
+        "titulo",
+        "Vaciar",
+        "Vacio"
     ],
     "workbench.editor.enablePreview": false
 }

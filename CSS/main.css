@@ -23,9 +23,12 @@ h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul{
 };
 
 ul{
-    list-style-type: none;    
+    list-style-type: none; 
+      
 }
-
+li{
+    list-style: none; 
+}
 a{
     text-decoration: none;
 }   

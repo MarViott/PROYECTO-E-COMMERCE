@@ -189,7 +189,7 @@ const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
 
-//CARGAR PRODUCTOS EN EL HTML
+
     function cargarProductos (productosElegidos) { 
         contenedorProductos.innerHTML = ""; //Limpiamos el contenedor de productos para que no se repitan al filtrar por categoria.
         //Recorremos el array de productos y los mostramos en el HTML
@@ -245,17 +245,18 @@ const numerito = document.querySelector("#numerito");
         botonesAgregar.forEach(boton => {
             boton.addEventListener("click", agregarAlCarrito);
         });
-
-        }
+    }
     //CARRITO
     //Creamos una variable para guardar los productos en el carrito
     let productosEnCarrito;
     //Si no hay productos en el local storage, los guardamos en el local storage
      //Creamos una variable para guardar los productos en el carrito
     //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
-    const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+    let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+    //Si no hay productos en el local storage, los guardamos en el local storage
+    //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
     if (productosEnCarritoLS) {
-        productosEnCarrito = productosEnCarritoLS; //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
+        productosEnCarrito = JSON.parse(productosEnCarritoLS); //Si hay productos en el local storage, los guardamos en la variable productosEnCarritoproductosEnCarritoLS; //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
         actualizarNumerito(); //Actualizamos el numerito del carrito
     } else {
         productosEnCarrito = [];
