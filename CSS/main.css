@@ -34,12 +34,13 @@ h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul{
 
 ul{
     list-style-type: none; 
-      
-}
-li{
+
+    li{
     list-style: none;
     font-family: var(--font-sec);   
+    }
 }
+
 a{
     text-decoration: none;
 }   
@@ -54,7 +55,7 @@ a{
 aside{
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: flex-start; 
     color: var(--clr-white);
     padding: 2rem;
     padding-right: 0;
@@ -64,6 +65,13 @@ aside{
     top: 0;
     height: 100%;      
     background-color: var(--clr-main);
+
+    .footer-index{     
+        position: absolute;
+        bottom: 0;
+        
+    }
+   
 }
 
 .logo{
