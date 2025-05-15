@@ -1,5 +1,7 @@
-let productosEnCarrito = localStorage.getItem("productos-en-carrito");
-productosEnCarrito = JSON.parse(productosEnCarrito); //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
+let productosEnCarrito = localStorage.getItem("productos-en-carrito") || []; //Obtenemos el carrito del local storage
+productosEnCarrito = JSON.parse(productosEnCarrito); //Convertimos el string en un objeto
+//Si no hay productos en el local storage, lo inicializamos como un array vacio
+//Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio"); //carritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos"); //carritoProductos = document.querySelector("#carrito-productos");
@@ -42,7 +44,7 @@ function cargarProductosCarrito() {
             <small>Subtotal</small>
             <p>$${producto.precio * producto.cantidad}</p>
             </div>
-            <button class="carrito-producto-eliminar" id="${producto.id}><i class="bi bi-trash-fill"></i></button>
+            <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
         `;
         contenedorCarritoProductos.append(div);
         })    
