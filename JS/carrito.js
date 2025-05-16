@@ -1,4 +1,4 @@
-let productosEnCarrito = localStorage.getItem("productos-en-carrito") || []; //Obtenemos el carrito del local storage
+let productosEnCarrito = localStorage.getItem("productos-en-carrito"); //Obtenemos el carrito del local storage
 productosEnCarrito = JSON.parse(productosEnCarrito); //Convertimos el string en un objeto
 //Si no hay productos en el local storage, lo inicializamos como un array vacio
 //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
@@ -6,6 +6,8 @@ productosEnCarrito = JSON.parse(productosEnCarrito); //Convertimos el string en 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio"); //carritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos"); //carritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones"); //carritoAcciones = document.querySelector("#carrito-acciones");
+const contenedorCarritoComprado = document.querySelector("#carrito-comprado"); //carritoComprado = document.querySelector("#carrito-comprado");
+//carritoComprado = document.querySelector("#carrito-comprado");
 let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar"); //carritoAccionesVaciar = document.querySelector("#carrito-acciones-vaciar"); //carritoAccionesVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total"); //carritoComprado = document.querySelector("#carrito-comprado"); //carritoComprado = document.querySelector("#carrito-comprado");
@@ -29,34 +31,36 @@ function cargarProductosCarrito() {
         div.innerHTML = `
             <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="carrito-producto-titulo">
-            <small>Titulo</small>
-            <h3>${producto.titulo}</h3>
+                <small>Titulo</small>
+                <h3>${producto.titulo}</h3>
             </div>
             <div class="producto-cantidad">
-            <small>Cantidad</small>
-            <p>${producto.cantidad}</p>
+                <small>Cantidad</small>
+                <p>${producto.cantidad}</p>
             </div>
             <div class="carrito-producto-precio">
-            <small>Precio</small>
-            <p>$${producto.precio}</p>
+                <small>Precio</small>
+                <p>$${producto.precio}</p>
             </div>
-            <div class="carrito-producto-subtotal">
-            <small>Subtotal</small>
+                <div class="carrito-producto-subtotal">
+                <small>Subtotal</small>
             <p>$${producto.precio * producto.cantidad}</p>
             </div>
             <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
         `;
         contenedorCarritoProductos.append(div);
         })    
+
+    actualizarBotonesEliminar();//Actualizamos los botones de eliminar para que funcionen al cargar la pagina
+    actualizarTotal();  
+
+    //Actualizamos el total del carrito
     } else {
         contenedorCarritoVacio.classList.remove("disabled"); 
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
         contenedorCarritoComprado.classList.add("disabled");
     }
-
-    actualizarBotonesEliminar();//Actualizamos los botones de eliminar para que funcionen al cargar la pagina
-    actualizarTotal(); 
 }
 
 cargarProductosCarrito(); //Llamamos a la funcion cargarProductos para que cargue los productos en el carrito al cargar la pagina
@@ -70,6 +74,27 @@ function actualizarBotonesEliminar () {
 }
 
 function eliminarDelCarrito(e) {
+    Toastify({
+        text: "Producto eliminado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #4b33a8, #785ce9)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
+        },
+        offset: {
+            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    
+
     const idBoton = e.currentTarget.id; //Obtenemos el id del boton que se presiono
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton); //Buscamos el producto en el carrito
     
