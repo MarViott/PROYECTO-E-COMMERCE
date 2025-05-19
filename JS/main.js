@@ -250,12 +250,10 @@ const numerito = document.querySelector("#numerito");
     //CARRITO
     //Creamos una variable para guardar los productos en el carrito
     let productosEnCarrito;
-    //Si no hay productos en el local storage, los guardamos en el local storage
-     //Creamos una variable para guardar los productos en el carrito
     //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
+
     let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
-    //Si no hay productos en el local storage, los guardamos en el local storage
-    //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
+    
     if (productosEnCarritoLS) {
         productosEnCarrito = JSON.parse(productosEnCarritoLS); //Si hay productos en el local storage, los guardamos en la variable productosEnCarritoproductosEnCarritoLS; //Si hay productos en el local storage, los guardamos en la variable productosEnCarrito
         actualizarNumerito(); //Actualizamos el numerito del carrito
