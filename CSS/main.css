@@ -184,7 +184,6 @@ aside {
         font-size: 1rem;
     }
 
-
         input, textarea {
             padding: .5rem;
             border-radius: .25rem;
@@ -202,9 +201,7 @@ aside {
         }
         textarea {
             height: 100px;           
-        }        
-    }  
-    
+        }     
     .form-group label {
         font-weight: bold;
         margin-bottom: 0.5rem;
@@ -249,7 +246,6 @@ aside {
         color: var(--clr-main-dark);
     }
 
-} 
    
 .numerito {
     background-color: var(--clr-white);
