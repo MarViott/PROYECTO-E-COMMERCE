@@ -1,12 +1,9 @@
-TIENDA TEATRO
+# TIENDA TEATRO
 
-Sitio web de venta de remeras artísticas.
+## Sitio web de venta de remeras artísticas
 
-@MarViott
-Mayo 2025
+### @MarViott - Mayo 2025
 
-Trabajo Final Curso FRONTEND JS - TALENTO TECH 2025
+### _Pre-entrega Curso FRONTEND JS - #TALENTO TECH 2025_
 
-Tecnología utilizada: HTML, CSS y JAVASCRIPT
-
-
+### Tecnología utilizada: HTML, CSS y JAVASCRIPT
