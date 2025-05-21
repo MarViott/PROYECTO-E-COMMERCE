@@ -4,6 +4,6 @@
 
 ### Pre-entrega Curso FRONTEND JS - TALENTO TECH 2025
 
-#### Tecnología utilizada: HTML, CSS y JAVASCRIPT
+### Tecnología utilizada: HTML, CSS y JAVASCRIPT
 
-#### Desarrollo: Marisa Viotti
+#### Desarrollo: MARISA VIOTTI
