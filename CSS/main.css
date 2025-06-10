@@ -452,6 +452,10 @@ main {
 }
 
 @media screen and (max-width: 675px) {
+    h1 {
+        color: var(--clr-main-light);
+    }
+    
     .wrapper {
         min-height: 100vh;
         display: flex;
