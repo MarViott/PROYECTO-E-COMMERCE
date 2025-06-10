@@ -78,6 +78,9 @@ aside {
     font-size: 1.3rem;
     padding-left: 1rem;
     font-weight: bold;
+    color: var(--clr-white);
+    align-items: center;
+
 }
 .logo-tienda {
     display: flex;
@@ -449,13 +452,19 @@ main {
     .contenedor-productos {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-}
-
-@media screen and (max-width: 675px) {
     .logo {
         font-size: 1.5rem;
         color: var(--clr-main-light);
+        
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .header-mobile 
+    .logo {
+        font-size: 1.5rem;
+        color: var(--clr-main-light);
+        
     }
     
     .wrapper {
@@ -553,11 +562,20 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .logo {
-        font-size: 1.5rem;
-        color: var(--clr-main-light);
+    .carrito-producto {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
     
+    .header-mobile {
+        padding: 0.5rem;
+        .logo {
+            font-size: 1.3rem;
+            color: var(--clr-grey);
+        }
+    }
+
 }
 
 
