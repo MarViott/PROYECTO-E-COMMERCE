@@ -453,7 +453,8 @@ main {
 }
 
 @media screen and (max-width: 675px) {
-    h1 {
+    .logo {
+        font-size: 1.5rem;
         color: var(--clr-main-light);
     }
     
@@ -552,7 +553,8 @@ main {
         grid-template-columns: 1fr;
     }
 
-    h1 {
+    .logo {
+        font-size: 1.5rem;
         color: var(--clr-main-light);
     }
     
