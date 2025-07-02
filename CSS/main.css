@@ -713,6 +713,9 @@ button:hover {
             font-size: 1.3rem;
             color: var(--clr-grey);
         }
+        h1 {
+            color: var(--clr-grey);
+        }
     }
 
 }
