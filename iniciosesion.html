@@ -53,19 +53,22 @@
         <main class="main-formulario">
         <h2 class="titulo-principal">Iniciar Sesión</h2>
         <p class="texto-informativo">Ingresa tus datos para acceder a tu cuenta.</p>
-        <form class="formulario">
+        <form class="formulario" id="loginForm" action="./index.html" method="POST">
             <label for="email">Correo electr&oacute;nico:</label>
             <input type="email" id="email" name="email" placeholder="Correo electr&oacute;nico" required>
             <label for="password">Contrase&ntilde;a:</label>
             <input type="password" id="password" name="password" placeholder="Contrase&ntilde;a" required>
             <button type="submit">Iniciar Sesión</button>
         </form>
+        
+        <p id="message"></p>    
         <br>
         <p class="texto-informativo">¿No tienes una cuenta? <a href="./registrodeusuario.html">Registrate</a>.</p>
         <br>
         <p class="texto-informativo">¿Olvidaste tu contrase&ntilde;a? <a href="./recuperarcontrasena.html">Recuperar Contrase&ntilde;a</a>.</p>
         </main>
     </div>
+    <script src="./JS/login.js"></script>
     <script src="./JS/main.js"></script>
     <script src="./JS/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
