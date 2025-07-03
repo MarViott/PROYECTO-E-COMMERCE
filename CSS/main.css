@@ -417,7 +417,7 @@ main {
 .contenedor-carrito {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.5rem;    
 }
 
 .carrito-vacio,
@@ -428,7 +428,8 @@ main {
 .carrito-productos {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1rem;    
+    
 }
 .carrito-producto {
     display: flex;
@@ -439,6 +440,7 @@ main {
     padding: .5rem;
     padding-right: 1,5rem;
     border-radius: 1rem;
+    gap: 3rem;    
 
     .carrito-producto-imagen {
         width: 4rem;
