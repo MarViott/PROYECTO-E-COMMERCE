@@ -597,6 +597,9 @@ button:hover {
         color: var(--clr-main-light);
         
     }
+    h1 {
+        color: var(--clr-main-light);
+    }
 }
 
 @media screen and (max-width: 675px) {
@@ -707,7 +710,7 @@ button:hover {
     .carrito-producto {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     
     .header-mobile {
@@ -715,12 +718,12 @@ button:hover {
         .logo {
             font-size: 1.3rem;
             color: var(--clr-grey);
-        }
+            }
+        
         h1 {
             color: var(--clr-white;
-        }
+        }        
     }
-
 }
 
 
