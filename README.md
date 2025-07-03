@@ -4,7 +4,7 @@
 
 ### @MarViott - Mayo 2025
 
-### _Pre-entrega Curso FRONTEND JS - #TALENTO TECH 2025_
+### Entrega Final Curso FRONTEND JS - #TALENTO TECH 2025_
 
 ### Tecnología utilizada: HTML, CSS y JAVASCRIPT
 
