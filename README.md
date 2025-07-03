@@ -9,3 +9,5 @@
 ### Tecnología utilizada: HTML, CSS y JAVASCRIPT
 
 #### Desarrollo: MARISA VIOTTI
+
+#### Profesor: FACUNDO CORONEL
