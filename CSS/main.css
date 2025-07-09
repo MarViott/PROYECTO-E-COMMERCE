@@ -429,18 +429,17 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;    
-    
 }
 .carrito-producto {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background-color: var(--clr-grey);
+    background-color: var(--clr-grey); 
     color: var(--clr-main);
     padding: .5rem;
-    padding-right: 1,5rem;
+    padding-right: 1.5rem;
     border-radius: 1rem;
-    gap: 3rem;    
+    gap: 3rem;   
 
     .carrito-producto-imagen {
         width: 4rem;
