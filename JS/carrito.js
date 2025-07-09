@@ -14,7 +14,7 @@ const contenedorTotal = document.querySelector("#total"); //carritoComprado = do
 const botonComprar = document.querySelector("#carrito-acciones-comprar"); //carritoComprado = document.querySelector("#carrito-comprado"); //carritoComprado = document.querySelector("#carrito-comprado");
 
 function cargarProductosCarrito() {
-    if (productosEnCarrito && productosEnCarrito.length > 0) {
+    if (productosEnCarrito && productosEnCarrito.length > 0) { 
     //Si hay productos en el carrito, mostramos el carrito y ocultamos el carrito vacio
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
@@ -49,7 +49,7 @@ function cargarProductosCarrito() {
             <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
         `;
         contenedorCarritoProductos.append(div);
-        })    
+        });   
 
     actualizarBotonesEliminar();//Actualizamos los botones de eliminar para que funcionen al cargar la pagina
     actualizarTotal();  
@@ -74,6 +74,15 @@ function actualizarBotonesEliminar () {
 }
 
 function eliminarDelCarrito(e) {
+    const idBoton = e.currentTarget.id; //Obtenemos el id del boton que se presiona
+    const index = productosEnCarrito.findIndex(producto => producto.id === idBoton); //Buscamos el producto en el carrito
+    
+    productosEnCarrito.splice(index, 1); //Eliminamos el producto del carrito
+    cargarProductosCarrito(); //Llamamos a la funcion cargarProductos para que actualice el carrito
+    
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito)); //Guardamos el carrito actualizado en el local storage
+    
+//Mostramos un mensaje de producto eliminado
     Toastify({
         text: "Producto eliminado",
         duration: 3000,
@@ -93,15 +102,6 @@ function eliminarDelCarrito(e) {
           },
         onClick: function(){} // Callback after click
       }).showToast();
-    
-
-    const idBoton = e.currentTarget.id; //Obtenemos el id del boton que se presiono
-    const index = productosEnCarrito.findIndex(producto => producto.id === idBoton); //Buscamos el producto en el carrito
-    
-    productosEnCarrito.splice(index, 1); //Eliminamos el producto del carrito
-    cargarProductosCarrito(); //Llamamos a la funcion cargarProductos para que actualice el carrito
-    
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito)); //Guardamos el carrito actualizado en el local storage
     
 }
 
