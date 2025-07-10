@@ -432,14 +432,14 @@ main {
 }
 .carrito-producto {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 3rem;
     align-items: center;
     background-color: var(--clr-grey); 
     color: var(--clr-main);
     padding: .5rem;
     padding-right: 1.5rem;
-    border-radius: 1rem;
-    gap: 3rem;   
+    border-radius: 1rem;  
 
     .carrito-producto-imagen {
         width: 4rem;
@@ -660,7 +660,7 @@ button:hover {
         
     }
     .header-mobile .logo {
-        color: var(--clr-grey);
+        color: var(--clr-main-light);
     }
     .open-menu .close-menu{        
         border: 0;       
@@ -716,7 +716,7 @@ button:hover {
         padding: 0.5rem;
         .logo {
             font-size: 1.3rem;
-            color: var(--clr-grey);
+            color: var(--clr-main-light);
             }
         
         h1 {

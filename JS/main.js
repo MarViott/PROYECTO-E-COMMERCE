@@ -237,8 +237,8 @@ const numerito = document.querySelector("#numerito");
             //Si el id del boton es todos, cargamos todos los productos en el HTML
                 
                 }
-            })  
-        });
+            })   
+        })
 
     function actualizarBotonesAgregar () {
         botonesAgregar = document.querySelectorAll(".producto-agregar");
