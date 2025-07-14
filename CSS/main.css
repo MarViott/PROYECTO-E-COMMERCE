@@ -431,15 +431,15 @@ main {
     gap: 1rem;    
 }
 .carrito-producto {
-    display: flex;
+    display: flex;    
     justify-content: space-between;
-    gap: 3rem;
     align-items: center;
     background-color: var(--clr-grey); 
     color: var(--clr-main);
     padding: .5rem;
     padding-right: 1.5rem;
-    border-radius: 1rem;  
+    border-radius: 1rem;
+    gap: 3rem;  
 
     .carrito-producto-imagen {
         width: 4rem;
@@ -720,7 +720,7 @@ button:hover {
             }
         
         h1 {
-            color: var(--clr-white;
+            color: var(--clr-white);
         }        
     }
 }
