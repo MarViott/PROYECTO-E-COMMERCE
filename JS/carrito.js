@@ -7,11 +7,11 @@ const contenedorCarritoVacio = document.querySelector("#carrito-vacio"); //carri
 const contenedorCarritoProductos = document.querySelector("#carrito-productos"); //carritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones"); //carritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado"); //carritoComprado = document.querySelector("#carrito-comprado");
-//carritoComprado = document.querySelector("#carrito-comprado");
-let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
-const botonVaciar = document.querySelector("#carrito-acciones-vaciar"); //carritoAccionesVaciar = document.querySelector("#carrito-acciones-vaciar"); //carritoAccionesVaciar = document.querySelector("#carrito-acciones-vaciar");
-const contenedorTotal = document.querySelector("#total"); //carritoComprado = document.querySelector("#carrito-comprado"); //carritoComprado = document.querySelector("#carrito-comprado");
-const botonComprar = document.querySelector("#carrito-acciones-comprar"); //carritoComprado = document.querySelector("#carrito-comprado"); //carritoComprado = document.querySelector("#carrito-comprado");
+
+let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar"); //botonesEliminar = document.querySelectorAll(".carrito-proudcto-eliminar");
+const botonVaciar = document.querySelector("#carrito-acciones-vaciar"); //carritoAccionesVaciar = document.querySelector("#carrito-acciones-vaciar"); 
+const contenedorTotal = document.querySelector("#total"); //carritoComprado = document.querySelector("#carrito-comprado"); 
+const botonComprar = document.querySelector("#carrito-acciones-comprar"); //carritoComprado = document.querySelector("#carrito-comprado"); 
 
 function cargarProductosCarrito() {
     if (productosEnCarrito && productosEnCarrito.length > 0) { 
@@ -48,8 +48,8 @@ function cargarProductosCarrito() {
             </div>
             <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
         `;
-        contenedorCarritoProductos.append(div);
-        });   
+         contenedorCarritoProductos.append(div);
+    });   
 
     actualizarBotonesEliminar();//Actualizamos los botones de eliminar para que funcionen al cargar la pagina
     actualizarTotal();  
